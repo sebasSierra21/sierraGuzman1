@@ -223,10 +223,10 @@ footer {
         transform: translateY(-9px) rotate(-45deg);
     }
 
- /*    section {
+    section {
         display: block;
         padding: 10px;
-    } */
+    }
  
     .texto {
       width: auto;
@@ -236,13 +236,28 @@ footer {
       padding: 0 20px;
     }
     .img {
-      width: 220px;
-      height: 280px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      width: auto;
+      height: 310px;
       margin: 20px 0;
     }
-    .img img {
-      width: 350px;
-      height: auto;
+
+    #myCarousel {
+      display: flex;
+      flex-flow: column;
+      justify-content: center; 
+      width: auto;
+      height: 310px;
+      margin: 0 0;  
+    }
+
+    .img img {    
+      display: flex;
+      flex-flow: column;
+      width: auto;
+      height: 310px;     
     }
 
     .clientes {
@@ -252,7 +267,7 @@ footer {
     .lista-clientes {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: space-between;
         overflow: hidden;
     }
 
@@ -267,35 +282,53 @@ footer {
 @media (min-width: 481px) and (max-width: 1024px) {
     /* Agrega aquí los estilos específicos para iPads y tabletas */
     section {
-        display: block;
-        /* flex-flow: row wrap; */
-        /* justify-content: center;   */ 
-        
+        display: flex;
+        flex-flow: column;
+        justify-content: center;        
     }
 
     .container {
       padding: 0 20px;
     }
     .texto {
-      width: 940px;
+      display: flex;
+      flex-flow: column;
+      width: auto;
       height: 250px;
     }
     
     .img {
-      width: 940px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center; 
+      width: auto;
       height: 400px;
       margin: 0 0;
+           
+    }
+
+    #myCarousel {
       display: flex;
-      justify-content: center;      
+      flex-flow: column;
+      justify-content: center; 
+      width: auto;
+      height: 400px;
+      margin: 0 0;  
     }
     
-    .img img {      
-      width: 640px;
-      height: 400px;     
+    .img img {    
+     display: flex;
+     flex-flow: column;
+     width: auto;
+     height: auto;     
     }
 
     .clientes {
       padding: 0;
+    }
+
+    .lista-clientes {
+        display: flex;        
     }
 
     .lista-clientes .box-clientes a img {
