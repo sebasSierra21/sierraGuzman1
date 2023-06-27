@@ -222,21 +222,26 @@ footer {
     .nav-open .hamburger:after {
         transform: translateY(-9px) rotate(-45deg);
     }
+
+ /*    section {
+        display: block;
+        padding: 10px;
+    } */
  
     .texto {
-      width: 100%;
+      width: auto;
       height: auto;
       align-items: center;
       text-align: center;
       padding: 0 20px;
     }
     .img {
-      width: 100%;
+      width: 220px;
       height: 280px;
       margin: 20px 0;
     }
     .img img {
-      width: 100%;
+      width: 350px;
       height: auto;
     }
 
@@ -252,8 +257,9 @@ footer {
     }
 
     .lista-clientes .box-clientes a img {
-        width: 190px;
-        height: 160px;
+        width: 210px;
+        height: 180px;
+        
     }
 }
   
@@ -263,7 +269,7 @@ footer {
     section {
         display: block;
         /* flex-flow: row wrap; */
-        justify-content: center;   
+        /* justify-content: center;   */ 
         
     }
 

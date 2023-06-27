@@ -43,41 +43,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 //Carrusel infinito 
-window.addEventListener('load', function() {
-  if (window.innerWidth > 376) {
+function cambiarTamanoPantalla() {
+  if (window.innerWidth > 480) {
     const listaClientes = document.getElementById('lista-clientes');
     const boxClientes = document.querySelectorAll('.box-clientes');
     const anchoSlide = boxClientes[0].offsetWidth;
     const numSlides = boxClientes.length;
     const listaAncho = anchoSlide * numSlides;
-  
+
     // Establecer el ancho de la lista para contener todos los elementos
     listaClientes.style.width = listaAncho + 'px';
-  
-  
+
     // Clonar los elementos de la lista
     for (let i = 0; i < numSlides; i++) {
       const clone = boxClientes[i].cloneNode(true);
       listaClientes.appendChild(clone);
     }
-  
+
     // Iniciar la animación del carrusel
     let posicion = 0;
     const velocidad = 1; // Ajusta la velocidad de desplazamiento según tus necesidades
-  
+
     function moverCarrusel() {
       posicion -= velocidad;
       listaClientes.style.transform = `translateX(${posicion}px)`;
-    
+
       // Reiniciar el carrusel cuando llega al final
       if (posicion <= -listaAncho) {
-      posicion = 0;
-    }
-    
+        posicion = 0;
+      }
+
       requestAnimationFrame(moverCarrusel);
     }
-  
+
     moverCarrusel();
   }
-  
-});
+}
+
+window.addEventListener('resize', cambiarTamanoPantalla);
